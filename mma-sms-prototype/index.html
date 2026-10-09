@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mubarak Model Academy | School management system prototype</title>
+  <meta name="description" content="Clickable prototype of a school management system for Nursery, Primary and Secondary sections. Demo data only.">
+  <meta name="theme-color" content="#0A3F35">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..750&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>try { var t = localStorage.getItem('mma-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+  <div class="app">
+    <aside class="side" id="side" aria-label="Main navigation">
+      <a class="brand" href="#/dashboard">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#D99A1E"/><g fill="none" stroke="#0A3F35" stroke-width="2.4" stroke-linejoin="round"><rect x="13" y="13" width="22" height="22"/><rect x="13" y="13" width="22" height="22" transform="rotate(45 24 24)"/></g><circle cx="24" cy="24" r="3.4" fill="#0A3F35"/></svg>
+        <span><b>Mubarak Model Academy</b><small>School management</small></span>
+      </a>
+      <nav class="nav" id="nav"></nav>
+      <div class="side-foot"><b>Ege, Adavi LGA, Okene</b><br>Kogi State, Nigeria<br><span id="foot-ver">Prototype v0.1 with demo data</span></div>
+    </aside>
+    <div class="scrim-side" id="scrim-side"></div>
+    <div class="main">
+      <div class="demo-bar">Demo prototype. All names, scores and payments are made up. Nothing you do here is saved.</div>
+      <header class="top">
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu">…</button>
+        <div class="search">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
+          <input id="gsearch" type="search" placeholder="Search students, staff or admission numbers" aria-label="Search" autocomplete="off">
+          <div class="search-res" id="gres" hidden></div>
+        </div>
+        <div class="top-r">
+          <div class="term-pill" id="termpill"></div>
+          <div class="seg" role="group" aria-label="Preview as" id="roleseg"></div>
+          <div style="position:relative"><button class="icon-btn" id="bell" aria-label="Notifications" aria-expanded="false"></button><div class="pop" id="bellpop" hidden></div></div>
+          <button class="icon-btn" id="theme" aria-label="Switch colour theme"></button>
+        </div>
+      </header>
+      <main id="view" tabindex="-1" aria-live="polite"></main>
+    </div>
+  </div>
+  <div id="overlay-root"></div>
+  <div id="toasts" aria-live="polite"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/views/dashboard.js"></script>
+  <script src="assets/js/views/people.js"></script>
+  <script src="assets/js/views/academics.js"></script>
+  <script src="assets/js/views/money.js"></script>
+  <script src="assets/js/views/comms.js"></script>
+  <script src="assets/js/views/services.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
